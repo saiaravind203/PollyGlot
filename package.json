@@ -1,6 +1,20 @@
 {
-  "name": "Scrim-s05rqc4",
+  "name": "pollyglot",
+  "version": "1.0.0",
   "description": "https://scrimba.com/fullstack-path-c0fullstack/~0xrr",
+  "keywords": [],
+  "homepage": "https://github.com/saiaravind203/PollyGlot#readme",
+  "bugs": {
+    "url": "https://github.com/saiaravind203/PollyGlot/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saiaravind203/PollyGlot.git"
+  },
+  "license": "ISC",
+  "author": "saiaravind",
+  "type": "commonjs",
+  "main": "index.js",
   "scripts": {
     "start": "vite",
     "dev": "vite",
