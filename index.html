@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PollyGlot</title>
+        <link rel="icon" type="image/x-icon" href="./assets/parrot.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Your HTML here -->
+         <div class="container">
+            <div class="banner-cont">
+                <div class="img-cont">
+                    <img src="./assets/parrot.png" alt="PollyGlot Logo">
+                </div>
+                <div class="text-cont">
+                    <h1 class="header">PollyGlot</h1>
+                    <p>Perfect Translation Every Time </p>
+                </div>
+            </div>
+            <div class="translation-container">
+                <div class="output-section">
+                    <p id="outputText">No messages yet. Start the conversation!</p>
+                </div>
+                <div class="input-section">
+                    <select id="languageSelect">
+                        <option value="es">🇪🇸 SPANISH</option>
+                        <option value="fr">🇫🇷 FRENCH</option>
+                        <option value="ja">🇯🇵 JAPANESE</option>
+                    </select>
+                    <textarea id="inputText" placeholder="Enter text to translate..."></textarea>
+                    <button id="translateButton"><i class="fa-regular fa-paper-plane"></i></button>
+                </div>
+            </div>
+         </div>
+        <script src="index.js" type="module"></script>
+    </body>
+</html>
