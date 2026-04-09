@@ -1,13 +1,17 @@
 import express from "express";
 import cors from "cors";
 import OpenAI from "openai";
+import dotenv from "dotenv";
+
+// Load environment variables
+dotenv.config();
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
 const openai = new OpenAI({
-    apiKey: "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",
+    apiKey: process.env.OPENROUTER_API_KEY,
     baseURL: "https://openrouter.ai/api/v1",
 });
 
