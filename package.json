@@ -22,7 +22,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "it": "^1.1.1",
     "vite": "latest"
-  },
-  "devDependencies": {}
+  }
 }
