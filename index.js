@@ -23,10 +23,22 @@ function addMessage(content, isUser = false, language = null) {
     if (!isUser) {
         const avatarDiv = document.createElement('div');
         avatarDiv.className = 'message-avatar';
-        const img = document.createElement('img');
-        img.src = './assets/parrot.png';
-        img.alt = 'PollyGlot';
-        avatarDiv.appendChild(img);
+        if (language === null) {
+            const img = document.createElement('img');
+            img.src = './assets/parrot.png';
+            img.alt = 'PollyGlot';
+            avatarDiv.appendChild(img);
+        } else {
+            const flagMap = {
+                'es': '🇪🇸',
+                'fr': '🇫🇷',
+                'ja': '🇯🇵'
+            };
+            const span = document.createElement('span');
+            span.textContent = flagMap[language];
+            span.style.fontSize = '24px';
+            avatarDiv.appendChild(span);
+        }
         messageDiv.appendChild(avatarDiv);
     }
     
@@ -66,9 +78,15 @@ async function handlesubmit(e){
     // Show typing indicator
     const typingDiv = document.createElement('div');
     typingDiv.className = 'message agent-message typing';
+    const flagMap = {
+        'es': '🇪🇸',
+        'fr': '🇫🇷',
+        'ja': '🇯🇵'
+    };
+    const flagEmoji = flagMap[language] || '🌍';
     typingDiv.innerHTML = `
         <div class="message-avatar">
-            <img src="./assets/parrot.png" alt="PollyGlot">
+            <span style="font-size: 24px;">${flagEmoji}</span>
         </div>
         <div class="message-content">
             <p><em>Translating...</em></p>
