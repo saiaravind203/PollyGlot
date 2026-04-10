@@ -36,7 +36,7 @@ function addMessage(content, isUser = false, language = null) {
             };
             const span = document.createElement('span');
             span.textContent = flagMap[language];
-            span.style.fontSize = '24px';
+            span.style.fontSize = '35px';
             avatarDiv.appendChild(span);
         }
         messageDiv.appendChild(avatarDiv);
@@ -86,7 +86,7 @@ async function handlesubmit(e){
     const flagEmoji = flagMap[language] || '🌍';
     typingDiv.innerHTML = `
         <div class="message-avatar">
-            <span style="font-size: 24px;">${flagEmoji}</span>
+            <span style="font-size: 35px;">${flagEmoji}</span>
         </div>
         <div class="message-content">
             <p><em>Translating...</em></p>
